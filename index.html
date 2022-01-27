@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+    <style>
+
+        body {
+            background-color: lightblue;
+        }
+
+        button {
+            background-color: rgb(52, 214, 214);
+            color: blue;
+            padding: auto;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: lightcoral;
+            transform: scale(1.3);
+            transition-duration: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+        }
+
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: blueviolet;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="button_A">Press me</button>
+    <h3 id="heading_A"></h3>
+
+
+<script> //começo do código
+ const buttonA = document.querySelector('#button_A');
+const headingA = document.querySelector('#heading_A');
+
+buttonA.onclick = function() {
+  let name = prompt('What is your name?');
+  alert('Hello ' + name + ', nice to see you!'); //ou da forma concatenada abaixo
+  //alert(`Hello ${name}, nice to see you!`);
+
+  headingA.textContent = 'Welcome ' + name;
+}
+
+</script>
+    
+</body>
+</html>
